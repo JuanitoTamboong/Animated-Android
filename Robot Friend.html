@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Friend</title>
+    <style type="text/css">
+*{
+    box-sizing: border-box;
+   
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.head{
+    border: 1px solid transparent;
+    height: 100px;
+    width: 200px;
+    border-radius: 75px 75px 0px 0px ;
+    background-color: #1e9724;
+    transition: all 1s;
+    cursor: pointer;
+}
+.head:hover{
+    transform: scale(1.2);
+
+    }
+.eyes{
+    height: 30px;
+    width: 30px;
+    border: 1px solid none;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 34px;
+    margin-left: 30px;
+    -webkit-animation: color-eyes 7s;
+    filter: contrast(100%);
+
+}
+@-webkit-keyframes color-eyes{
+    from{background: red;}
+    to{ background: yellow;}
+     from{ background: blue;}
+     to{background:violet;}
+     
+}
+.eyes-2{
+    height: 30px;
+    width: 30px;
+    border: 1px solid none;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 34px;
+    margin-left: 110px;
+    -webkit-animation: color-eyes 7s;
+    filter: contrast(100%);
+}
+.mouth{
+    height: 20px;
+    width: 100px;
+    background:#000;
+    bottom: -40px;
+    border-radius: 0px 0px 200px 200px;
+    position:relative;
+    margin-left:24px;
+    top: 10px;
+}
+.body{
+    height: 200px;
+    width: 200px;
+    border: 1px solid none;
+    background:#1e9724 ;
+    position: absolute;
+    margin-bottom: -350px;
+    border-radius: 0px 0px 85px 85px;
+}
+.body img{
+    height: 80px;
+    width: 80px;
+    margin-left:30%;
+    margin-bottom: -100px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 1px #000;
+   
+}
+.hands{
+    width: 35px;
+    height: 120px ;
+    background: #1e9724;
+    border: 1px solid none;
+    margin-right: 310px;
+    position: absolute;
+    bottom: 270px;
+    border-radius: 15px;
+   animation: hands 1s linear infinite;-->
+}
+.hands:hover{
+    transform: rotateZ(20deg);
+}
+@keyframes hands {
+    0%{
+        transform: translateY(-40px)rotateZ(65deg);
+    }
+   %50{
+    transform: translateY(-0px)rotateZ(-10deg);
+    }
+      100%{
+        transform: translateY(-20px)rotateZ(45deg);
+      } 
+}
+.hands-2{
+    width: 35px;
+    height: 120px ;
+    background: #1e9724;
+    border: 1px solid none;
+    position: absolute;
+    bottom: 270px;
+    border-radius: 15px;
+    margin-left: 310px;
+    animation: hands-2 1s linear infinite;
+}
+.hands-2:hover{
+    transform: rotateZ(-20deg);
+}
+@keyframes hands-2 {
+    0%{
+        transform: translateY(-40px)rotateZ(-65deg);
+    }
+   %50{
+    transform: translateY(-0px)rotateZ(-10deg);
+    }
+      100%{
+        transform: translateY(-20px)rotateZ(-45deg);
+      } 
+}
+.feet{
+    height: 130px;
+    width: 43px;
+    background: #1e9724;
+    position: absolute;
+    bottom: 90px;
+    border-radius: 15px;
+    margin-left: -140px;
+    transform: rotateZ(8deg);
+    box-shadow: 2px 2px 1px 2px #096b0e;
+}
+.feet-2{
+    height: 130px;
+    width: 43px;
+    background: #1e9724;
+    bottom: 20px;
+    border-radius: 15px;
+    margin-left: 145px;
+    transform: rotateZ(-16deg);
+    position: relative;
+    box-shadow: 2px 2px 1px 2px #096b0e;
+}
+.anthena{
+    height:53px;
+    width: 23px;
+    position: fixed;
+    background-color: #1e9724;
+    margin-left: -200px;
+    border-radius: 23px 0px 0px 23px;
+    transform: rotateZ(-45deg);
+    top: -2px;
+    animation: anthena 1s linear infinite;
+    }
+    .anthena:hover{
+        transform: rotateZ(-34deg);
+    }
+    @keyframes anthena
+    {    
+    0%{
+            transform: translateY(5px)rotateZ(-34deg);
+        }
+        100%{
+            transform: translateY(1px)rotateZ(0deg); 
+        }
+    }
+    .anthena-2{
+        height:53px;
+    width: 23px;
+    position: fixed;
+    background-color: #1e9724;
+    margin-left: 200px;
+    border-radius: 0px 23px 23px 0px;
+    transform: rotateZ(45deg);
+    top: -2px;
+    animation: anthena-2 1s linear infinite;
+    }
+    .anthena-2:hover{
+        transform: rotateZ(34deg);
+    }
+    @keyframes anthena-2
+    {    
+    0%{
+            transform: translateY(5px)rotateZ(34deg);
+        }
+        100%{
+            transform: translateY(-1px)rotateZ(0deg); 
+        }
+    }
+  </style>
+</head>
+<body>
+    <div class="head">  
+    <div class="eyes">
+        <div class="eyes-2">
+        </div>
+            <div class="mouth"> 
+        </div>    
+    </div>
+    </div>
+    <div class="body">
+        <img src="images/andriod.jpg">
+    </div>
+        <div class="hands">
+        </div>
+            <div class="hands-2">
+    </div>
+    <div class="feet">
+    <div class="feet-2"></div>
+    </div>
+    <div class="anthena">
+    </div>
+        <div class="anthena-2">
+    </div>
+</body>
+</html>
